@@ -4,12 +4,12 @@ module.exports = {
  "mode": "none",
  "entry": "./src/index.js",
  "output": {
-   "path": __dirname + '/dist',
+   "path": __dirname + '/docs',
    "filename": "bundle.js"
  },
  devtool: 'cheap-module-eval-source-map',
  devServer: {
-   contentBase: path.join(__dirname, 'dist')
+   contentBase: path.join(__dirname, 'docs')
  },
  "module": {
    "rules": [
