@@ -1,6 +1,7 @@
 .vscode/
 /node_modules/
 .node-version
+X
 
 .DS_Store
 Thumbs.db
