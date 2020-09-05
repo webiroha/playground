@@ -1,0 +1,25 @@
+body {
+  background: #ffcc1f;
+  color: #222;
+  display: flex;
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  height: 100vh; }
+
+#root {
+  margin: auto;
+  text-align: center; }
+
+.github-link {
+  background: #222;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  text-decoration: none; }
+
+.github-link:hover,
+.github-link:focus {
+  background: #fff;
+  color: #222; }
+

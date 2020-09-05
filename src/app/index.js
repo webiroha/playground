@@ -1,4 +1,4 @@
-import './styles/main.scss';
+import '../styles/main.scss';
 
 const root = document.getElementById('root');
 

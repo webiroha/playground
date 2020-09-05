@@ -1,22 +1,49 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'none',
-  entry: './src/index.js',
+  entry: {
+    top: './src/app/index.js',
+    // class: './src/app/class/index.js',
+  },
   output: {
-    path: __dirname + '/docs',
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, './docs'),
+    filename: 'style.[chunkhash].js',
   },
   plugins: [
-    new CleanWebpackPlugin(),,
-    new CopyWebpackPlugin([
-      {
-        from: './src/assets/images',
-        to: 'assets/images',
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'JavaScrip Playground',
+      filename: 'index.html',
+      template: './src/template/index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
       },
-    ]),
+      chunks: ['top'],
+    }),
+    // new HtmlWebpackPlugin({
+    //   title: 'JavaScrip Playground | class',
+    //   filename: 'class/index.html',
+    //   template: './src/template/index.html',
+    //   inject: true,
+    //   minify: {
+    //     removeComments: true,
+    //     collapseWhitespace: false,
+    //   },
+    //   chunks: ['class'],
+    // }),
+    // new CopyPlugin([
+    //   {
+    //     from: './src/assets/images',
+    //     to: 'assets/images',
+    //   },
+    // ]),
     new MiniCssExtractPlugin({
       filename: '[name].[chunkhash].css',
     }),
@@ -25,22 +52,27 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'docs'),
   },
+  resolve: { extensions: ['.js'] },
   module: {
     rules: [
-      {
-        test: [/.css$|.scss$/],
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          MiniCssExtractPlugin.loader,
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
           },
         },
+      },
+      {
+        test: [/.css$|.scss$/],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
