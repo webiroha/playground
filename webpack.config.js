@@ -8,7 +8,7 @@ module.exports = {
   mode: 'none',
   entry: {
     top: './src/app/index.js',
-    // class: './src/app/class/index.js',
+    class: './src/app/class/index.js',
   },
   output: {
     path: path.resolve(__dirname, './docs'),
@@ -27,17 +27,17 @@ module.exports = {
       },
       chunks: ['top'],
     }),
-    // new HtmlWebpackPlugin({
-    //   title: 'JavaScrip Playground | class',
-    //   filename: 'class/index.html',
-    //   template: './src/template/index.html',
-    //   inject: true,
-    //   minify: {
-    //     removeComments: true,
-    //     collapseWhitespace: false,
-    //   },
-    //   chunks: ['class'],
-    // }),
+    new HtmlWebpackPlugin({
+      title: 'JavaScrip Playground | class',
+      filename: 'class/index.html',
+      template: './src/template/index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+      chunks: ['class'],
+    }),
     // new CopyPlugin([
     //   {
     //     from: './src/assets/images',

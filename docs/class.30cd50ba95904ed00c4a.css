@@ -9,17 +9,23 @@ body {
   margin: auto;
   text-align: center; }
 
-.github-link {
+.button {
   background: #222;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
   margin-top: 30px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   text-decoration: none; }
 
-.github-link:hover,
-.github-link:focus {
+.button + .button {
+  margin-left: 20px; }
+
+.button:hover,
+.button:focus {
   background: #fff;
+  color: #222; }
+
+.home-link {
   color: #222; }
 
