@@ -9,8 +9,8 @@ const headerData = {
   title: 'class',
   text: 'class function',
 };
+
 const classHeader = new Header(headerData);
-root.innerHTML = classHeader.render();
 
 // References
 const refData = {
@@ -20,7 +20,8 @@ const refData = {
 };
 
 const classReferences = new References(refData);
-// root.innerHTML = classReferences.render();
+
+root.innerHTML = classHeader.render() + classReferences.render();
 
 const homeLink = document.createElement('a');
 const homeLinkText = document.createTextNode('Home🏠');

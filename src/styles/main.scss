@@ -8,6 +8,15 @@ body {
   height: 100vh;
 }
 
+a {
+  color: #222;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
 #root {
   margin: auto;
   text-align: center;
@@ -20,7 +29,6 @@ body {
   display: inline-block;
   margin-top: 30px;
   padding: 10px 20px;
-  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -37,3 +45,8 @@ body {
   color: #222;
   display: block;
 }
+
+.references {
+  font-size: 14px;
+}
+

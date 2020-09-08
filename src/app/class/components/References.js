@@ -6,7 +6,7 @@ class References {
     };
   }
   render() {
-    return `<a href=${this.state.url} target="_blank">${this.state.title}</a>`;
+    return `<p class="references">References: <a href=${this.state.url} target="_blank">${this.state.title}</a></p>`;
   }
 }
 
