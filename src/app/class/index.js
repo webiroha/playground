@@ -13,13 +13,20 @@ const headerData = {
 const classHeader = new Header(headerData);
 
 // References
-const refData = {
-  url:
-    'https://css-tricks.com/reactive-uis-vanillajs-part-2-class-based-components/',
-  title: 'Reactive UI’s with VanillaJS – Part 2: Class Based Components',
-};
+const refData = [
+  {
+    url:
+      'https://css-tricks.com/reactive-uis-vanillajs-part-2-class-based-components/',
+    title: 'Reactive UI’s with VanillaJS – Part 2: Class Based Components',
+  },
+  {
+    url:
+      'https://stackoverflow.com/questions/41894492/how-is-object-oriented-javascript-used-for-dom-manipulation/41896245',
+    title: 'How is Object Oriented Javascript used for DOM manipulation',
+  },
+];
 
-const classReferences = new References(refData);
+const classReferences = new References(refData[1]);
 
 root.innerHTML = classHeader.render() + classReferences.render();
 
@@ -30,3 +37,13 @@ homeLink.className = 'home-link';
 
 homeLink.appendChild(homeLinkText);
 root.appendChild(homeLink);
+
+// class Component {
+//   constructor() {
+//     this.element = document.createElement('p');
+//     this.element.textContent = 'Umm, class is hard...!';
+//   }
+// }
+
+// const use = new Component();
+// root.appendChild(use.element);
