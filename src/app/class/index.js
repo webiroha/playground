@@ -4,15 +4,21 @@ import '../../styles/main.scss';
 
 const root = document.getElementById('root');
 
+const fragment = document.createDocumentFragment();
+
 // Header
 const headerData = {
   title: 'class',
   text: 'class function',
 };
-
 const classHeader = new Header(headerData);
+fragment.appendChild(classHeader.fragment);
 
 // References
+const refTitle = document.createElement('h2');
+refTitle.textContent = 'References';
+fragment.appendChild(refTitle);
+
 const refData = [
   {
     url:
@@ -25,25 +31,17 @@ const refData = [
     title: 'How is Object Oriented Javascript used for DOM manipulation',
   },
 ];
+const ref = new References(refData);
+fragment.appendChild(ref.links);
 
-const classReferences = new References(refData[1]);
-
-root.innerHTML = classHeader.render() + classReferences.render();
-
+// back home
 const homeLink = document.createElement('a');
 const homeLinkText = document.createTextNode('Home🏠');
 homeLink.href = '../index.html';
 homeLink.className = 'home-link';
 
 homeLink.appendChild(homeLinkText);
-root.appendChild(homeLink);
+fragment.appendChild(homeLink);
 
-// class Component {
-//   constructor() {
-//     this.element = document.createElement('p');
-//     this.element.textContent = 'Umm, class is hard...!';
-//   }
-// }
-
-// const use = new Component();
-// root.appendChild(use.element);
+// add all fragments
+root.appendChild(fragment);

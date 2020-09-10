@@ -1,17 +1,12 @@
 class Header {
   constructor(props) {
-    this.state = {
-      title: props.title,
-      text: props.text,
-    };
-  }
-
-  render() {
-    return `
-            <header>
-                <h1>${this.state.title} practice page</h1>
-                <p>Currently, trying ${this.state.text}</p>
-            <header>`;
+    this.fragment = document.createDocumentFragment();
+    this.headText = document.createElement('h1');
+    this.headText.textContent = `${props.title} practice page`;
+    this.copy = document.createElement('p');
+    this.copy.textContent = `Currently, trying ${props.text}`;
+    this.fragment.appendChild(this.headText);
+    this.fragment.appendChild(this.copy);
   }
 }
 

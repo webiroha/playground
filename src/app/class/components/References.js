@@ -1,12 +1,14 @@
 class References {
   constructor(props) {
-    this.state = {
-      url: props.url,
-      title: props.title,
-    };
-  }
-  render() {
-    return `<p class="references">References: <a href=${this.state.url} target="_blank">${this.state.title}</a></p>`;
+    this.links = document.createElement('ul');
+    props.map((props) => {
+      this.references = document.createElement('li');
+      this.link = document.createElement('a');
+      this.link.textContent = props.title;
+      this.link.href = props.url;
+      this.references.appendChild(this.link);
+      this.links.appendChild(this.references);
+    });
   }
 }
 

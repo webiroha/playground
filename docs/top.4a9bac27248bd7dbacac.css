@@ -9,7 +9,7 @@ a {
   color: #222;
   text-decoration: none; }
   a:hover, a:focus {
-    opacity: 0.8; }
+    font-weight: bold; }
 
 #root {
   margin: auto;
