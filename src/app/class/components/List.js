@@ -1,6 +1,7 @@
-class References {
+class List {
   constructor(props) {
     this.links = document.createElement('ul');
+    this.links.className = 'list';
     props.map((props) => {
       this.references = document.createElement('li');
       this.link = document.createElement('a');
@@ -12,4 +13,4 @@ class References {
   }
 }
 
-export default References;
+export default List;

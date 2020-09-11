@@ -13,7 +13,7 @@ a {
   text-decoration: none;
   &:hover,
   &:focus {
-    font-weight: bold;
+    color: #fff;
   }
 }
 
@@ -46,7 +46,14 @@ a {
   display: block;
 }
 
-.references {
-  font-size: 14px;
+.ref {
+  font-size:1.2em;
+  margin: 0;
+}
+
+.list {
+  font-size: 0.8em;
+  margin: 0.5em 0 1rem;
+  text-align: left;
 }
 

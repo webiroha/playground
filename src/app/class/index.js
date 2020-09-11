@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import References from './components/References';
+import List from './components/List';
 import '../../styles/main.scss';
 
 const root = document.getElementById('root');
@@ -17,6 +17,7 @@ fragment.appendChild(classHeader.fragment);
 // References
 const refTitle = document.createElement('h2');
 refTitle.textContent = 'References';
+refTitle.className = 'ref';
 fragment.appendChild(refTitle);
 
 const refData = [
@@ -31,7 +32,7 @@ const refData = [
     title: 'How is Object Oriented Javascript used for DOM manipulation',
   },
 ];
-const ref = new References(refData);
+const ref = new List(refData);
 fragment.appendChild(ref.links);
 
 // back home

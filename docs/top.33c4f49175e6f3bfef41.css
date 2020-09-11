@@ -9,7 +9,7 @@ a {
   color: #222;
   text-decoration: none; }
   a:hover, a:focus {
-    font-weight: bold; }
+    color: #fff; }
 
 #root {
   margin: auto;
@@ -33,6 +33,12 @@ a {
   color: #222;
   display: block; }
 
-.references {
-  font-size: 14px; }
+.ref {
+  font-size: 1.2em;
+  margin: 0; }
+
+.list {
+  font-size: 0.8em;
+  margin: 0.5em 0 1rem;
+  text-align: left; }
 
