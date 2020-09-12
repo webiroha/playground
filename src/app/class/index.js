@@ -1,5 +1,6 @@
 import Header from './components/Header';
-import List from './components/List';
+// import List from './components/List';
+import ListLinkItems from './components/ListLinkItems';
 import '../../styles/main.scss';
 
 const root = document.getElementById('root');
@@ -17,7 +18,7 @@ fragment.appendChild(classHeader.fragment);
 // References
 const refTitle = document.createElement('h2');
 refTitle.textContent = 'References';
-refTitle.className = 'ref';
+refTitle.className = 'sub-title';
 fragment.appendChild(refTitle);
 
 const refData = [
@@ -32,8 +33,8 @@ const refData = [
     title: 'How is Object Oriented Javascript used for DOM manipulation',
   },
 ];
-const ref = new List(refData);
-fragment.appendChild(ref.links);
+const ref = new ListLinkItems(refData);
+fragment.appendChild(ref.lists);
 
 // back home
 const homeLink = document.createElement('a');
