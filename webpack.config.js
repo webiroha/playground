@@ -9,6 +9,7 @@ module.exports = {
   entry: {
     top: './src/app/index.js',
     class: './src/app/class/index.js',
+    factory: './src/app/factory/index.js',
   },
   output: {
     path: path.resolve(__dirname, './docs'),
@@ -37,6 +38,17 @@ module.exports = {
         collapseWhitespace: false,
       },
       chunks: ['class'],
+    }),
+    new HtmlWebpackPlugin({
+      title: 'JavaScrip Playground | Factory',
+      filename: 'factory/index.html',
+      template: './src/template/index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+      chunks: ['factory'],
     }),
     // new CopyPlugin([
     //   {
