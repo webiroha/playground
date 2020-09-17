@@ -12,13 +12,13 @@ module.exports = {
     factory: './src/app/factory/index.js',
   },
   output: {
-    path: path.resolve(__dirname, './docs'),
-    filename: 'style.[chunkhash].js',
+    path: path.resolve(__dirname, 'docs'),
+    filename: '[name].[chunkhash].js',
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'JavaScrip Playground',
+      title: 'JavaScript Playground',
       filename: 'index.html',
       template: './src/template/index.html',
       inject: true,
@@ -57,12 +57,14 @@ module.exports = {
     //   },
     // ]),
     new MiniCssExtractPlugin({
-      filename: '[name].[chunkhash].css',
+      filename: 'style.[chunkhash].css',
     }),
   ],
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'docs'),
+    compress: true,
+    port: 9000,
   },
   resolve: { extensions: ['.js'] },
   module: {
