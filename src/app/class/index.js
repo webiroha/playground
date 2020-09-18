@@ -1,6 +1,6 @@
 import Header from './components/Header';
-// import List from './components/List';
 import ListLinkItems from './components/ListLinkItems';
+import Home from './components/Home';
 import '../../styles/main.scss';
 
 const root = document.getElementById('root');
@@ -37,13 +37,8 @@ const ref = new ListLinkItems(refData);
 fragment.appendChild(ref.lists);
 
 // back home
-const homeLink = document.createElement('a');
-const homeLinkText = document.createTextNode('Home🏠');
-homeLink.href = '../index.html';
-homeLink.className = 'home-link';
-
-homeLink.appendChild(homeLinkText);
-fragment.appendChild(homeLink);
+const home = new Home();
+fragment.appendChild(home.homeLink);
 
 // add all fragments
 root.appendChild(fragment);

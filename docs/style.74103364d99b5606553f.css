@@ -29,9 +29,9 @@ a {
 .button + .button {
   margin-left: 20px; }
 
-.home-link {
+.home {
   color: #222;
-  display: block; }
+  display: inline-block; }
 
 .sub-title {
   font-size: 1.2em;
