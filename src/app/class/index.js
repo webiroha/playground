@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import ListLinkItems from './components/ListLinkItems';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import '../../styles/main.scss';
 
@@ -10,10 +11,9 @@ const fragment = document.createDocumentFragment();
 // Header
 const headerData = {
   title: 'class',
-  text: 'class function',
 };
 const classHeader = new Header(headerData);
-fragment.appendChild(classHeader.fragment);
+fragment.appendChild(classHeader.headerBlock);
 
 // References
 const refTitle = document.createElement('h2');
@@ -36,9 +36,11 @@ const refData = [
 const ref = new ListLinkItems(refData);
 fragment.appendChild(ref.lists);
 
-// back home
+// footer
+const footer = new Footer();
 const home = new Home();
-fragment.appendChild(home.homeLink);
+footer.footerBlock.appendChild(home.homeLink);
+fragment.appendChild(footer.footerBlock);
 
 // add all fragments
 root.appendChild(fragment);

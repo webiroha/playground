@@ -2,6 +2,8 @@ import '../../styles/main.scss';
 
 import header from './components/header';
 import references from './components/references';
+import footer from './components/footer';
+import home from './components/home';
 
 const factoryHeader = header('Factory function');
 
@@ -30,8 +32,13 @@ const refData = [
 
 const refs = references(refData);
 
+const factoryFooter = footer();
+const homeLink = home();
+factoryFooter.footerBlock.appendChild(homeLink.link);
+
 fragment.appendChild(factoryTitle);
 fragment.appendChild(factoryText);
 fragment.appendChild(refs.fragment);
+fragment.appendChild(factoryFooter.footerBlock);
 
 root.appendChild(fragment);

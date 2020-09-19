@@ -15,17 +15,23 @@ const githubLinkText = document.createTextNode('See code');
 githubLink.href = 'https://github.com/webiroha/playground';
 githubLink.className = 'github-link button';
 
-const classLink = document.createElement('a');
-const classLinkText = document.createTextNode('Class practice page');
-classLink.href = 'class/index.html';
-classLink.className = 'class-link button';
-
 title.appendChild(titleText);
 sub.appendChild(subText);
 githubLink.appendChild(githubLinkText);
-classLink.appendChild(classLinkText);
+
 fragment.appendChild(title);
 fragment.appendChild(sub);
 fragment.appendChild(githubLink);
-fragment.appendChild(classLink);
+
+const practiceItems = ['class', 'factory'];
+
+practiceItems.map((item) => {
+  const link = document.createElement('a');
+  const linkText = document.createTextNode(`${item} practice page`);
+  link.href = `${item}/index.html`;
+  link.className = `${item}-link button`;
+  link.appendChild(linkText);
+  fragment.appendChild(link);
+});
+
 root.appendChild(fragment);
