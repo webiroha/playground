@@ -33,8 +33,8 @@ const refData = [
 const refs = references(refData);
 
 const factoryFooter = footer();
-const homeLink = home();
-factoryFooter.footerBlock.appendChild(homeLink.link);
+// invoke home function immedietly
+factoryFooter.footerBlock.appendChild(home()());
 
 fragment.appendChild(factoryTitle);
 fragment.appendChild(factoryText);

@@ -1,3 +1,4 @@
+// this is a pattern of return function inside home components
 const home = () => {
   const link = document.createElement('a');
   const linkText = document.createTextNode('Home🏠');
@@ -5,7 +6,7 @@ const home = () => {
   link.className = 'home';
   link.appendChild(linkText);
 
-  return { link };
+  return () => link;
 };
 
 export default home;
