@@ -2,6 +2,7 @@ import '../../styles/main.scss';
 
 import header from './components/header';
 import references from './components/references';
+import countButton from './components/countButton';
 import footer from './components/footer';
 import home from './components/home';
 
@@ -28,9 +29,17 @@ const refData = [
       'https://www.theodinproject.com/courses/javascript/lessons/factory-functions-and-the-module-pattern',
     title: 'FACTORY FUNCTIONS AND THE MODULE PATTERN',
   },
+  {
+    url:
+      'https://www.freecodecamp.org/news/playing-around-with-closures-currying-and-cool-abstractions/',
+    title: 'Closures, Curried Functions, and Cool Abstractions in JavaScript',
+  },
 ];
 
 const refs = references(refData);
+
+// count button by closure
+const button = countButton();
 
 const factoryFooter = footer();
 // invoke home function immedietly
@@ -39,6 +48,7 @@ factoryFooter.footerBlock.appendChild(home()());
 fragment.appendChild(factoryTitle);
 fragment.appendChild(factoryText);
 fragment.appendChild(refs.fragment);
+// fragment.appendChild(button.fragment);
 fragment.appendChild(factoryFooter.footerBlock);
 
 root.appendChild(fragment);
