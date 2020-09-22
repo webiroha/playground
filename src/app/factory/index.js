@@ -2,21 +2,13 @@ import '../../styles/main.scss';
 
 import header from './components/header';
 import references from './components/references';
-import countButton from './components/countButton';
 import footer from './components/footer';
 import home from './components/home';
 
-const factoryHeader = header('Factory function');
-
 const root = document.getElementById('root');
-
 const fragment = document.createDocumentFragment();
 
-const factoryTitle = document.createElement('h1');
-factoryTitle.appendChild(document.createTextNode(factoryHeader.name));
-
-const factoryText = document.createElement('p');
-factoryText.appendChild(document.createTextNode(factoryHeader.text()));
+const factoryHeader = header('Factory function');
 
 const refData = [
   {
@@ -38,17 +30,12 @@ const refData = [
 
 const refs = references(refData);
 
-// count button by closure
-const button = countButton();
-
 const factoryFooter = footer();
 // invoke home function immedietly
 factoryFooter.footerBlock.appendChild(home()());
 
-fragment.appendChild(factoryTitle);
-fragment.appendChild(factoryText);
+fragment.appendChild(factoryHeader.fragment);
 fragment.appendChild(refs.fragment);
-// fragment.appendChild(button.fragment);
 fragment.appendChild(factoryFooter.footerBlock);
 
 root.appendChild(fragment);
