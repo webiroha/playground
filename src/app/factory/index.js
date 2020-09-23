@@ -26,6 +26,10 @@ const refData = [
       'https://www.freecodecamp.org/news/playing-around-with-closures-currying-and-cool-abstractions/',
     title: 'Closures, Curried Functions, and Cool Abstractions in JavaScript',
   },
+  {
+    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures',
+    title: 'Closures - JavaScript | MDN',
+  },
 ];
 
 const refs = references(refData);

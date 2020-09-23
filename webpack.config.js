@@ -10,6 +10,7 @@ module.exports = {
     top: './src/app/index.js',
     class: './src/app/class/index.js',
     factory: './src/app/factory/index.js',
+    cookie: './src/app/cookie/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -49,6 +50,17 @@ module.exports = {
         collapseWhitespace: false,
       },
       chunks: ['factory'],
+    }),
+    new HtmlWebpackPlugin({
+      title: 'JavaScrip Playground | Cookie',
+      filename: 'cookie/index.html',
+      template: './src/template/index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      },
+      chunks: ['cookie'],
     }),
     // new CopyPlugin([
     //   {
