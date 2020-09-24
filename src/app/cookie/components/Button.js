@@ -4,19 +4,26 @@ const Button = (name) => {
   button.type = 'button';
 
   const addCookie = () => {
-    document.cookie = 'value=trialcookie';
+    document.cookie = 'key=trialcookie;';
   };
 
-  const removeCookie = () => {
-    document.cookie = `value=; max-age=0;`;
+  const expireCookie = () => {
+    document.cookie = 'key=; expires=Thu, 01 Jan 2000 00:00:00 GMT;';
+  };
+
+  const maxCookie = () => {
+    document.cookie = 'key=; max-age=0;';
   };
 
   switch (name) {
     case 'add':
       button.addEventListener('click', addCookie, false);
       break;
-    case 'remove':
-      button.addEventListener('click', removeCookie, false);
+    case 'expire':
+      button.addEventListener('click', expireCookie, false);
+      break;
+    case 'max':
+      button.addEventListener('click', maxCookie, false);
       break;
   }
 

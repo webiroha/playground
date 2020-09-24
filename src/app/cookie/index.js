@@ -9,10 +9,12 @@ const fragment = document.createDocumentFragment();
 const cookieHeader = header('cookie');
 
 const addButton = Button('add');
-const removeButton = Button('remove');
+const expireButton = Button('expire');
+const removeButton = Button('max');
 
 fragment.appendChild(cookieHeader.fragment);
 fragment.appendChild(addButton.button);
+fragment.appendChild(expireButton.button);
 fragment.appendChild(removeButton.button);
 
 root.appendChild(fragment);
