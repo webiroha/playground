@@ -15,16 +15,22 @@ const Button = (name) => {
     document.cookie = 'key=; max-age=0;';
   };
 
+  const reload = (f) => () => {
+    f();
+    location.reload();
+  };
+
   switch (name) {
     case 'add':
-      button.addEventListener('click', addCookie, false);
+      button.addEventListener('click', reload(addCookie), false);
       break;
-    case 'expire':
-      button.addEventListener('click', expireCookie, false);
+    case 'delete(expire)':
+      button.addEventListener('click', reload(expireCookie), false);
       break;
-    case 'max':
-      button.addEventListener('click', maxCookie, false);
+    case 'delete(max-age)':
+      button.addEventListener('click', reload(maxCookie), false);
       break;
+    default:
   }
 
   return { button };
