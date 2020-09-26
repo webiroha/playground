@@ -29,6 +29,12 @@ a {
 .button + .button {
   margin-left: 20px; }
 
+.cookie {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none; }
+
 .home {
   color: #222;
   display: inline-block; }

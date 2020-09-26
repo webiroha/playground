@@ -2,6 +2,7 @@ const Button = (name) => {
   const button = document.createElement('button');
   button.appendChild(document.createTextNode(name));
   button.type = 'button';
+  button.className = 'button cookie';
 
   const addCookie = () => {
     document.cookie = 'key=trialcookie;';
@@ -20,18 +21,13 @@ const Button = (name) => {
     location.reload();
   };
 
-  switch (name) {
-    case 'add':
-      button.addEventListener('click', reload(addCookie), false);
-      break;
-    case 'delete(expire)':
-      button.addEventListener('click', reload(expireCookie), false);
-      break;
-    case 'delete(max-age)':
-      button.addEventListener('click', reload(maxCookie), false);
-      break;
-    default:
-  }
+  const event = {
+    add: reload(addCookie),
+    'delete(expire)': reload(expireCookie),
+    'delete(max-age)': reload(maxCookie),
+  };
+
+  button.addEventListener('click', event[name], false);
 
   return { button };
 };
