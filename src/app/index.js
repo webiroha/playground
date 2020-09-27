@@ -10,18 +10,11 @@ const subText = document.createTextNode(
   'This is a personal playground for strengthening basic JavaScript skills.'
 );
 
-const githubLink = document.createElement('a');
-const githubLinkText = document.createTextNode('See code');
-githubLink.href = 'https://github.com/webiroha/playground';
-githubLink.className = 'github-link button';
-
 title.appendChild(titleText);
 sub.appendChild(subText);
-githubLink.appendChild(githubLinkText);
 
 fragment.appendChild(title);
 fragment.appendChild(sub);
-fragment.appendChild(githubLink);
 
 const practiceItems = ['class', 'factory', 'cookie'];
 
@@ -42,5 +35,13 @@ practiceItems.map((item) => {
 
 links.appendChild(linksFragment);
 fragment.appendChild(links);
+
+const githubLink = document.createElement('a');
+const githubLinkText = document.createTextNode('See code');
+githubLink.href = 'https://github.com/webiroha/playground';
+githubLink.className = 'github-link';
+
+githubLink.appendChild(githubLinkText);
+fragment.appendChild(githubLink);
 
 root.appendChild(fragment);
