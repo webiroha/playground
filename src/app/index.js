@@ -26,9 +26,11 @@ fragment.appendChild(githubLink);
 const practiceItems = ['class', 'factory', 'cookie'];
 
 const links = document.createElement('ul');
+links.className = `page-links`;
 const linksFragment = document.createDocumentFragment();
 practiceItems.map((item) => {
   const list = document.createElement('li');
+  list.className = `page-link`;
   const link = document.createElement('a');
   const linkText = document.createTextNode(`${item} practice page`);
   link.href = `${item}/index.html`;

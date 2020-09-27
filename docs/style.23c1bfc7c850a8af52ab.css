@@ -1,0 +1,133 @@
+/* A modern CSS reset
+   https://github.com/hankchizljaw/modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%; }
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: .01ms !important;
+    -webkit-animation-duration: .01ms !important;
+            animation-duration: .01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important; } }
+
+body {
+  background: #ffcc1f;
+  color: #222;
+  display: flex;
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  height: 100vh; }
+
+a {
+  color: #222;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #fff; }
+
+ul {
+  list-style-type: none; }
+
+#root {
+  margin: auto;
+  text-align: center; }
+
+.home {
+  color: #222;
+  display: inline-block;
+  margin-top: 30px; }
+
+.sub-title {
+  font-size: 1.2em;
+  margin: 0; }
+
+.list {
+  font-size: 0.8em;
+  margin: 0.5em 0 1rem;
+  text-align: left; }
+
+.page-links {
+  display: flex; }
+
+.page-link + .page-link {
+  margin-left: 20px; }
+
+.button {
+  background: #222;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  margin: 30px 0;
+  padding: 10px 20px; }
+  .button:hover, .button:focus {
+    background: #fff;
+    color: #222; }
+
+.button + button {
+  margin-left: 20px; }
+
+.cookie {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none; }
+

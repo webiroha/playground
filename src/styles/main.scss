@@ -1,64 +1,11 @@
 @charset 'UTF-8';
 
-body {
-  background: #ffcc1f;
-  color: #222;
-  display: flex;
-  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-  height: 100vh;
-}
-
-a {
-  color: #222;
-  text-decoration: none;
-  &:hover,
-  &:focus {
-    color: #fff;
-  }
-}
-
-#root {
-  margin: auto;
-  text-align: center;
-}
-
-.button {
-  background: #222;
-  border-radius: 4px;
-  color: #fff;
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-
-  &:hover,
-  &:focus {
-    background: #fff;
-    color: #222;
-  }
-}
-
-.button + .button {
-  margin-left: 20px;
-}
+@import 'base/reset', 'base/base';
+@import 'layout/layout';
+@import 'pages/home';
+@import 'components/button';
 
 .cookie {
   appearance: none;
   border: none;
 }
-
-.home {
-  color: #222;
-  display: inline-block;
-}
-
-.sub-title {
-  font-size:1.2em;
-  margin: 0;
-}
-
-.list {
-  font-size: 0.8em;
-  margin: 0.5em 0 1rem;
-  text-align: left;
-}
-
