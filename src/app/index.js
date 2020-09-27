@@ -23,15 +23,22 @@ fragment.appendChild(title);
 fragment.appendChild(sub);
 fragment.appendChild(githubLink);
 
-const practiceItems = ['class', 'factory'];
+const practiceItems = ['class', 'factory', 'cookie'];
 
+const links = document.createElement('ul');
+const linksFragment = document.createDocumentFragment();
 practiceItems.map((item) => {
+  const list = document.createElement('li');
   const link = document.createElement('a');
   const linkText = document.createTextNode(`${item} practice page`);
   link.href = `${item}/index.html`;
   link.className = `${item}-link button`;
   link.appendChild(linkText);
-  fragment.appendChild(link);
+  list.appendChild(link);
+  linksFragment.appendChild(list);
 });
+
+links.appendChild(linksFragment);
+fragment.appendChild(links);
 
 root.appendChild(fragment);
