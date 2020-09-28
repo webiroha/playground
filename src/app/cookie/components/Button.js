@@ -2,7 +2,7 @@ const Button = (name) => {
   const button = document.createElement('button');
   button.appendChild(document.createTextNode(name));
   button.type = 'button';
-  button.className = 'button cookie';
+  button.className = 'button button--black cookie';
 
   const addCookie = () => {
     document.cookie = 'key=trialcookie;';

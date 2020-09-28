@@ -27,7 +27,7 @@ practiceItems.map((item) => {
   const link = document.createElement('a');
   const linkText = document.createTextNode(`${item} practice page`);
   link.href = `${item}/index.html`;
-  link.className = `${item}-link button`;
+  link.className = `button button--black ${item}-link`;
   link.appendChild(linkText);
   list.appendChild(link);
   linksFragment.appendChild(list);
@@ -39,7 +39,7 @@ fragment.appendChild(links);
 const githubLink = document.createElement('a');
 const githubLinkText = document.createTextNode('See code');
 githubLink.href = 'https://github.com/webiroha/playground';
-githubLink.className = 'github-link';
+githubLink.className = 'button button--line';
 
 githubLink.appendChild(githubLinkText);
 fragment.appendChild(githubLink);
