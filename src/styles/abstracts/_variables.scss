@@ -1,0 +1,14 @@
+// Font family [main]
+$font-family-main:'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+// Font color [main]
+$font-color-main: #222;
+
+// Font color [white]
+$font-color-white: #fff;
+
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;

@@ -72,10 +72,16 @@ select {
     scroll-behavior: auto !important; } }
 
 body {
-  background: #ffcc1f;
   color: #222;
+  font: normal 16px/1.6 "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-align: center; }
+  @media (min-width: 768px) {
+    body {
+      font-size: 112.5%; } }
+
+body {
+  background: #ffcc1f;
   display: flex;
-  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
   height: 100vh; }
 
 a {
