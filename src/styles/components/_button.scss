@@ -5,21 +5,19 @@
   padding: 10px 20px;
   transform: scale(1);
 
-  &:hover,
-  &:focus,
-  &:active {
+  @include on-event {
     transform: scale(0.98);
     transition: transform 0.5s;
   }
 
   &--black {
-    background: #222;
-    color: #fff;
+    background: $font-color-main;
+    color: $font-color-white;
   }
 
   &--line {
-    border : 2px solid #222;
-    color: #222;
+    border : 2px solid $font-color-main;
+    color: $font-color-main;
   }
 }
 

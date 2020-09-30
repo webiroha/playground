@@ -5,16 +5,10 @@ body {
 }
 
 a {
-  color: #222;
+  color: $font-color-main;
   text-decoration: none;
 }
 
 ul {
   list-style-type: none;
-}
-
-
-#root {
-  margin: auto;
-  text-align: center;
 }

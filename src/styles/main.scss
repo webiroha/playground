@@ -1,12 +1,26 @@
+// Copyright (c) 2017 Hugo Giraudel
+// Released under the MIT license
+// https://github.com/HugoGiraudel/sass-boilerplate
+
 @charset 'UTF-8';
 
+// 1. Configuration and helpers
 @import 'abstracts/variables', 'abstracts/mixins';
-@import 'base/reset', 'base/typography', 'base/base';
+
+// 2. Vendors
+@import 'base/reset';
+
+// 3. Base stuff
+@import 'base/typography', 'base/base';
+
+// 4. Layout-related sections
 @import 'layout/layout';
-@import 'pages/home';
+
+// 5. Components
 @import 'components/button';
 
-.cookie {
-  appearance: none;
-  border: none;
-}
+// 6. Page-specific styles
+@import 'pages/home';
+@import 'pages/cookie';
+
+
