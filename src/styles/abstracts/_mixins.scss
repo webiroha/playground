@@ -1,3 +1,4 @@
+// for event
 @mixin on-event($self: false) {
   @if $self {
     &,
@@ -17,6 +18,7 @@
   }
 }
 
+// for responsive
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {

@@ -18,7 +18,6 @@ fragment.appendChild(classHeader.headerBlock);
 // References
 const refTitle = document.createElement('h2');
 refTitle.textContent = 'References';
-refTitle.className = 'sub-title';
 fragment.appendChild(refTitle);
 
 const refData = [

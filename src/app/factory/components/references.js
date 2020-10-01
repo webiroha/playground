@@ -3,7 +3,6 @@ import reference from './reference';
 const references = (refs) => {
   const fragment = document.createDocumentFragment();
   const title = document.createElement('h2');
-  title.className = 'sub-title';
   const titleText = document.createTextNode('references');
 
   const lists = document.createElement('ul');
