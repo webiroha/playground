@@ -18,28 +18,31 @@ fragment.appendChild(sub);
 
 const practiceItems = ['class', 'factory', 'cookie'];
 
-const links = document.createElement('ul');
-links.className = `page-links`;
-const linksFragment = document.createDocumentFragment();
+const nav = document.createElement('nav');
+nav.className = `nav`;
+const navList = document.createElement('ul');
+navList.className = `nav__list`;
+const navListFragment = document.createDocumentFragment();
 practiceItems.map((item) => {
-  const list = document.createElement('li');
-  list.className = `page-link`;
+  const navItem = document.createElement('li');
+  navItem.className = `nav__item`;
   const link = document.createElement('a');
   const linkText = document.createTextNode(`${item} practice page`);
   link.href = `${item}/index.html`;
-  link.className = `button button--black ${item}-link`;
+  link.className = `button button--black`;
   link.appendChild(linkText);
-  list.appendChild(link);
-  linksFragment.appendChild(list);
+  navItem.appendChild(link);
+  navListFragment.appendChild(navItem);
 });
 
-links.appendChild(linksFragment);
-fragment.appendChild(links);
+navList.appendChild(navListFragment);
+nav.appendChild(navList);
+fragment.appendChild(navList);
 
 const githubLink = document.createElement('a');
 const githubLinkText = document.createTextNode('See code');
 githubLink.href = 'https://github.com/webiroha/playground';
-githubLink.className = 'button button--line';
+githubLink.className = 'button button--line github-link';
 
 githubLink.appendChild(githubLinkText);
 fragment.appendChild(githubLink);
