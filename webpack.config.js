@@ -71,9 +71,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.[chunkhash].css',
     }),
-    new MiniCssExtractPlugin({
-      filename: 'style.[chunkhash].css',
-    }),
   ],
   devtool: 'cheap-module-eval-source-map',
   devServer: {
@@ -95,7 +92,7 @@ module.exports = {
         },
       },
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',

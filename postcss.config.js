@@ -1,4 +1,3 @@
 module.exports = {
-  parser: 'postcss-scss',
-  plugins: [require('autoprefixer')(), require('postcss-normalize')()],
+  plugins: [require('autoprefixer')],
 };

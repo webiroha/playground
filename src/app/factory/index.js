@@ -1,3 +1,4 @@
+import 'sanitize.css';
 import '../../styles/main.scss';
 
 import header from './components/header';
