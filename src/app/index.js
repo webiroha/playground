@@ -43,7 +43,7 @@ fragment.appendChild(navList);
 const githubLink = document.createElement('a');
 const githubLinkText = document.createTextNode('See code');
 githubLink.href = 'https://github.com/webiroha/playground';
-githubLink.className = 'button button--line github-link';
+githubLink.className = 'button button--line';
 
 githubLink.appendChild(githubLinkText);
 fragment.appendChild(githubLink);

@@ -1,7 +1,8 @@
 import 'sanitize.css';
 import '../../styles/main.scss';
+
 import Header from './components/Header';
-import ListLinkItems from './components/ListLinkItems';
+import ListLinkItem from './components/ListLinkItem';
 import Footer from './components/Footer';
 import Home from './components/Home';
 
@@ -19,6 +20,7 @@ fragment.appendChild(classHeader.headerBlock);
 // References
 const refTitle = document.createElement('h2');
 refTitle.textContent = 'References';
+refTitle.className = 'ref-title';
 fragment.appendChild(refTitle);
 
 const refData = [
@@ -33,8 +35,9 @@ const refData = [
     title: 'How is Object Oriented Javascript used for DOM manipulation',
   },
 ];
-const ref = new ListLinkItems(refData);
-fragment.appendChild(ref.lists);
+
+const ref = new ListLinkItem(refData);
+fragment.appendChild(ref.list);
 
 // footer
 const footer = new Footer();

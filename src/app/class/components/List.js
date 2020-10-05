@@ -1,6 +1,6 @@
 class List {
   constructor() {
-    this.lists = document.createElement('ul');
+    this.list = document.createElement('ul');
   }
 }
 
