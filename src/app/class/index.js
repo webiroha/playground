@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 
 const root = document.getElementById('root');
-
 const fragment = document.createDocumentFragment();
 
 // Header
@@ -15,7 +14,7 @@ const headerData = {
   title: 'class',
 };
 const classHeader = new Header(headerData);
-fragment.appendChild(classHeader.headerBlock);
+fragment.appendChild(classHeader.headerBlock.element);
 
 // References
 const refTitle = document.createElement('h2');

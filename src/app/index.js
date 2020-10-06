@@ -2,8 +2,9 @@ import 'sanitize.css';
 import '../styles/main.scss';
 
 const root = document.getElementById('root');
-
 const fragment = document.createDocumentFragment();
+
+// title and subtitle
 const title = document.createElement('h1');
 const titleText = document.createTextNode('JavaScript Playground');
 const sub = document.createElement('p');
@@ -17,6 +18,7 @@ sub.appendChild(subText);
 fragment.appendChild(title);
 fragment.appendChild(sub);
 
+// for nav buttons
 const practiceItems = ['class', 'factory', 'cookie'];
 
 const nav = document.createElement('nav');
@@ -40,6 +42,7 @@ navList.appendChild(navListFragment);
 nav.appendChild(navList);
 fragment.appendChild(navList);
 
+// github link
 const githubLink = document.createElement('a');
 const githubLinkText = document.createTextNode('See code');
 githubLink.href = 'https://github.com/webiroha/playground';
@@ -48,4 +51,5 @@ githubLink.className = 'button button--line';
 githubLink.appendChild(githubLinkText);
 fragment.appendChild(githubLink);
 
+// add all elements to root
 root.appendChild(fragment);
