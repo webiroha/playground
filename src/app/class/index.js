@@ -2,26 +2,27 @@ import 'sanitize.css';
 import '../../styles/main.scss';
 
 import Header from './components/Header';
+import ElementText from './components/ElementText';
 import ListLinkItem from './components/ListLinkItem';
 import Footer from './components/Footer';
-import Home from './components/Home';
 
 const root = document.getElementById('root');
 const fragment = document.createDocumentFragment();
 
 // Header
-const headerData = {
-  title: 'class',
-};
+const headerData = { title: 'class' };
 const classHeader = new Header(headerData);
 fragment.appendChild(classHeader.headerBlock.element);
 
-// References
-const refTitle = document.createElement('h2');
-refTitle.textContent = 'References';
-refTitle.className = 'ref-title';
-fragment.appendChild(refTitle);
+// References title
+const refTitle = new ElementText({
+  elem: 'h2',
+  class: 'ref-title',
+  text: 'References',
+});
+fragment.appendChild(refTitle.element);
 
+// References list
 const refData = [
   {
     url:
@@ -40,9 +41,7 @@ fragment.appendChild(ref.list);
 
 // footer
 const footer = new Footer();
-const home = new Home();
-footer.footerBlock.appendChild(home.homeLink);
-fragment.appendChild(footer.footerBlock);
+fragment.appendChild(footer.footerBlock.element);
 
 // add all fragments
 root.appendChild(fragment);

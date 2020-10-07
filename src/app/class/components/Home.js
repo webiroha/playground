@@ -1,10 +1,10 @@
 class Home {
   constructor() {
-    this.homeLink = document.createElement('a');
-    this.homeLinkText = document.createTextNode('Home🏠');
-    this.homeLink.href = '../index.html';
-    this.homeLink.className = 'home';
-    this.homeLink.appendChild(this.homeLinkText);
+    this.link = document.createElement('a');
+    this.text = document.createTextNode('Home🏠');
+    this.link.href = '../index.html';
+    this.link.className = 'home';
+    this.link.appendChild(this.text);
   }
 }
 

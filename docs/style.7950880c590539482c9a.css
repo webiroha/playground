@@ -532,8 +532,14 @@ button {
   margin: auto;
   text-align: center; }
 
+.title {
+  margin: 0; }
+
+.copy {
+  margin: 0 0 1em; }
+
 .ref-title {
-  margin-bottom: 0.2em; }
+  margin: 0.2em; }
 
 .button {
   border-radius: 4px;

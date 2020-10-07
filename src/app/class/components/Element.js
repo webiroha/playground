@@ -1,7 +1,7 @@
 class Element {
   constructor(props) {
     this.element = document.createElement(props.elem);
-    this.element.className = props.class;
+    if (props.class) this.element.className = props.class;
   }
 }
 

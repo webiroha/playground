@@ -1,7 +1,11 @@
+import Element from './Element';
+import Home from './Home';
+
 class Footer {
   constructor() {
-    this.footerBlock = document.createElement('footer');
-    this.footerBlock.className = 'footer';
+    this.footerBlock = new Element({ elem: 'footer', class: 'footer' });
+    this.home = new Home();
+    this.footerBlock.element.appendChild(this.home.link);
   }
 }
 
