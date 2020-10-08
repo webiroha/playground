@@ -1,8 +1,8 @@
-const footer = () => {
-  const footerBlock = document.createElement('footer');
-  footerBlock.className = 'footer';
+const Footer = () => {
+  const footer = document.createElement('footer');
+  footer.className = 'footer';
 
-  return { footerBlock };
+  return { footer };
 };
 
-export default footer;
+export default Footer;

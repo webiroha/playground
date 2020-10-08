@@ -1,15 +1,15 @@
 import 'sanitize.css';
 import '../../styles/main.scss';
 
-import header from './components/header';
-import references from './components/references';
-import footer from './components/footer';
-import home from './components/home';
+import Header from './components/Header';
+import ListBlock from './components/ListBlock';
+import Footer from './components/Footer';
+import Home from './components/Home';
 
 const root = document.getElementById('root');
 const fragment = document.createDocumentFragment();
 
-const factoryHeader = header('Factory function');
+const factoryHeader = Header('Factory function');
 
 const refData = [
   {
@@ -33,14 +33,14 @@ const refData = [
   },
 ];
 
-const refs = references(refData);
+const refs = ListBlock(refData);
 
-const factoryFooter = footer();
+const factoryFooter = Footer();
 // invoke home function immedietly
-factoryFooter.footerBlock.appendChild(home()());
+factoryFooter.footer.appendChild(Home()());
 
 fragment.appendChild(factoryHeader.fragment);
 fragment.appendChild(refs.fragment);
-fragment.appendChild(factoryFooter.footerBlock);
+fragment.appendChild(factoryFooter.footer);
 
 root.appendChild(fragment);

@@ -1,4 +1,4 @@
-const header = (name) => {
+const Header = (name) => {
   const fragment = document.createDocumentFragment();
   const title = document.createElement('h1');
   title.appendChild(document.createTextNode(name));
@@ -12,4 +12,4 @@ const header = (name) => {
   return { fragment };
 };
 
-export default header;
+export default Header;
